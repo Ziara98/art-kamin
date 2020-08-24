@@ -1,0 +1,122 @@
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: rem-calc(420);
+    margin-bottom: rem-calc(170);
+}
+
+.tabs .tab {
+    order: 99;
+    flex-grow: 1;
+    display: none;
+    background: #fff;
+}
+
+.tabs input[type="radio"] {
+    display: none;
+}
+
+.tabs input[type="radio"]:checked+label {
+    background: #fff;
+}
+
+.tabs input[type="radio"]:checked+label+.tab {
+    display: block;
+}
+
+@media (max-width: 45em) {
+
+    .tabs .tab,
+    .tabs label {
+        order: initial;
+    }
+
+    .tabs label {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 0.2rem;
+    }
+}
+
+.block-list {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.7s linear;
+}
+
+
+.block__title {
+    position: relative;
+    cursor: pointer;
+    border-bottom: 1px solid #000;
+    padding: rem-calc(15) 0 rem-calc(13);
+
+    text-transform: uppercase;
+    font-size: rem-calc(17);
+    line-height: 140%;
+    color: #2D2D2D;
+    @include Gilroy-Regular;
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        right: rem-calc(10);
+        height: rem-calc(10);
+        width: rem-calc(2);
+        background: #000;
+        border-radius: rem-calc(99);
+        transform: rotate(45deg);
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: rem-calc(19);
+        right: rem-calc(10);
+        background: #000;
+        transition: transform 0.2s linear;
+        width: rem-calc(2);
+        height: rem-calc(10);
+        transform: rotate(-45deg);
+        border-radius: rem-calc(99);
+    }
+
+    &--active~.block-list {
+        height: auto;
+        opacity: 1;
+        transition: all 0.7s linear;
+    }
+
+    &--active {
+        &::before {
+            transform: rotate(45deg);
+            top: rem-calc(20);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+            top: rem-calc(20);
+        }
+    }
+
+}
+
+.block__title:last-child {
+    border-bottom: none !important;
+}
+
+.item__text {
+    font-size: rem-calc(15);
+    line-height: 140%;
+    color: #333333;
+    @include Gilroy-Light;
+    max-width: rem-calc(390);
+    margin: 0 auto;
+}
+
+.item__text:last-child {
+    margin-bottom: rem-calc(30);
+    margin-top: rem-calc(15);
+}

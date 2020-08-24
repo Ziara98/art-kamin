@@ -1,0 +1,13 @@
+.feature-photo__inner {
+    margin-left: 0 !important;
+    @include col();
+    @include size-lgs(6);
+
+    background: rgba(0, 0, 0, 0.04);
+    background-image: url('../img/icons/line.svg');
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
+
+    padding: rem-calc(40) 0 rem-calc(95);
+}

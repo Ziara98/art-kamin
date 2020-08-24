@@ -1,0 +1,12 @@
+include ../../mixins-pug/nav-links.pug
+
+- let navLinkNames = ['Produse', 'Oferte', 'Proiecte', 'Noutăți', 'Contacte'];
+- let links = ['#', '#', '#', '#', '#'];
+
+nav.nav(role="menu")
+    ul.nav-list
+        - for (let i = 0; i < navLinkNames.length; i++)
+            +nav-links(links[i], navLinkNames[i])
+
+button#menu__button.cmn-toggle-switch.cmn-toggle-switch__htx
+    span toggle menu

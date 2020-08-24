@@ -1,0 +1,156 @@
+/*nav*/
+.nav {
+    width: rem-calc(500);
+    @include Gilroy-SemiBold;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.nav__link {
+    color: #2D2D2D;
+    font-size: rem-calc(17);
+    line-height: rem-calc(20);
+    transition: color 0.3s linear;
+
+    &:hover {
+        color: #F73A00;
+    }
+}
+
+
+/*burger*/
+.cmn-toggle-switch {
+    position: absolute;
+    z-index: 8000;
+    top: rem-calc(7); // Позиционирование бургера по оси X
+    right: rem-calc(10); // Позиционирование бургера по оси Y
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: rem-calc(44); // Общие размеры бургера (ширина)
+    height: rem-calc(40); // Общие размеры бургера (высота)
+    overflow: hidden;
+    font-size: 0;
+    text-indent: rem-calc(-9999);
+    appearance: none;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+
+    @include md-block() {
+        display: none;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    span {
+        // Средняя линия бургера
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: rem-calc(5);
+        right: rem-calc(5);
+        width: rem-calc(32);
+        height: rem-calc(3);
+        margin: auto;
+        display: block;
+        border-radius: rem-calc(5);
+        background-color: #1E6BC6;
+
+        // Изменения стилей средней линии на определенных размерах экрана (если необходимо)
+
+
+        &::before,
+        // Верхняя линия бургера
+        &::after {
+            // Нижняя линия бургера
+            position: absolute;
+            content: "";
+            left: 0;
+            display: block;
+            width: 100%;
+            height: rem-calc(3);
+            border-radius: rem-calc(5);
+            background-color: #1E6BC6;
+        }
+
+        // Изменения стилей верхней и нижней линий на определенных размерах экрана (если необходимо)
+        &::before {
+            top: rem-calc(9);
+        }
+
+        &::after {
+            bottom: rem-calc(9);
+        }
+    }
+}
+
+// Стили бургера после образования крестика
+.cmn-toggle-switch__htx {
+    width: rem-calc(56);
+    height: rem-calc(56);
+    background: transparent;
+    border-radius: 50%;
+    transition: all 1s ease-out;
+
+    // Стили средней линии после образования крестика
+    span {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        // Стили верхней и нижней линий после образования крестика
+        &::before,
+        &::after {
+            transition-duration: 0.5s, 0.5s;
+            transition-delay: 0.3s, 0;
+        }
+
+        &::before {
+            transition-property: top, transform;
+        }
+
+        &::after {
+            transition-property: bottom, transform;
+        }
+    }
+}
+
+// Активный класс (.active), который добавляется через js для активации бургера
+.cmn-toggle-switch__htx.active {
+    background: transparent;
+
+    // Стили средней линии при образовании крестика
+    span {
+        background: transparent; // Прозрачный фон средней линии, чтобы ее не было видно после образования крестика
+        width: rem-calc(30);
+        right: rem-calc(15);
+
+        // Стили верхней и нижней линий при образовании крестика
+        &::before,
+        &::after {
+            transition-delay: 0, 0.5s;
+        }
+
+        // Разворот нижней линии
+        &::before {
+            top: 0;
+            transform: rotate(45deg);
+        }
+
+        // Разворот верхней линии
+        &::after {
+            bottom: 0;
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+/* end of burger*/

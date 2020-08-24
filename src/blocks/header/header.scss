@@ -1,0 +1,10 @@
+.header__inner {
+    flex-basis: 94%;
+    padding: rem-calc(45) 0 rem-calc(36.8) 0;
+}
+
+.header__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

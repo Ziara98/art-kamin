@@ -1,0 +1,42 @@
+.side-socials__inner {
+    @include col();
+    @include size-lgs(1);
+    max-width: rem-calc(80);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: rem-calc(5);
+    background: #fff;
+    margin-left: 0 !important;
+    @include Gilroy-Light;
+}
+
+
+.side-socials__items {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.side-socials__item {
+    transform: rotate(-90deg);
+
+}
+
+
+.side-socials__link {
+    font-size: rem-calc(15);
+    line-height: 140%;
+    color: #333333;
+    text-transform: capitalize;
+
+
+    &:hover {
+        color: #333333;
+
+    }
+}

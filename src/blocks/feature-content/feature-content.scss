@@ -1,0 +1,22 @@
+.feature-content-title {
+    font-size: rem-calc(38);
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #000000;
+    @include Gilroy-Black;
+}
+
+
+.feature-content-text {
+    font-size: rem-calc(15);
+    line-height: 140%;
+    color: #333333;
+    @include Gilroy-Light;
+    margin: rem-calc(35) 0 rem-calc(37);
+    max-width: rem-calc(431);
+}
+
+
+.feature-content__inner {
+    margin: rem-calc(78) 0 0 rem-calc(79);
+}
