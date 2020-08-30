@@ -1,0 +1,55 @@
+.footer__info-item {
+    display: flex;
+    margin-bottom: rem-calc(28);
+
+}
+
+.footer__info-socials {
+    display: flex;
+}
+
+.footer__info {
+    @include col();
+    @include size-lgs(4);
+    margin-left: rem-calc(220) !important;
+
+}
+
+.info__svg {
+    stroke: #fff;
+    width: rem-calc(24);
+    height: rem-calc(24);
+
+    &:nth-child(2) {
+        opacity: 0.3;
+    }
+}
+
+
+.footer__info-text {
+    font-size: rem-calc(17);
+    line-height: 140%;
+    color: #FFFFFF;
+    @include Gilroy-Light;
+    margin-left: rem-calc(15);
+}
+
+
+.footer__socials-text {
+    font-size: 17px;
+    line-height: 140%;
+    color: #FFFFFF;
+    opacity: 0.5;
+    @include Gilroy-Light;
+    margin-right: rem-calc(20);
+}
+
+
+.social__svg {
+    width: rem-calc(24);
+    height: rem-calc(24);
+    fill: #fff;
+    opacity: 0.3;
+    margin-right: rem-calc(20);
+
+}

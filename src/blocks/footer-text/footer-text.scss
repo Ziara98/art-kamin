@@ -1,0 +1,13 @@
+.footer__text {
+    @include col();
+    @include size-lgs(8);
+}
+
+
+.footer__text-main {
+    font-size: 15px;
+    line-height: 140%;
+    color: #FFFFFF;
+    @include Gilroy-Light;
+    max-width: rem-calc(538);
+}

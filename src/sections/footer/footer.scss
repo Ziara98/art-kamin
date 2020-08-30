@@ -1,0 +1,26 @@
+.footer {
+    background: #171717;
+}
+
+.footer-top {
+    display: flex;
+    align-items: center;
+}
+
+.footer-bottom {
+    display: flex;
+}
+
+.footer-policy {
+    margin-bottom: rem-calc(30);
+
+    &:before {
+        display: block;
+        content: '';
+        width: rem-calc(1180);
+        height: rem-calc(1);
+        background: #FFFFFF;
+        opacity: 0.2;
+        margin: 0 auto rem-calc(20);
+    }
+}

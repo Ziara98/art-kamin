@@ -1,0 +1,28 @@
+.footer__policy {
+    display: flex;
+    justify-content: space-around;
+    margin-top: rem-calc(30);
+}
+
+.dev__svg {
+    width: rem-calc(24);
+    height: rem-calc(24);
+    fill: #fff;
+    margin-right: rem-calc(10);
+}
+
+
+.footer__policy-text {
+    font-size: rem-calc(14);
+    line-height: rem-calc(16);
+    color: rgba(255, 255, 255, 0.3);
+    @include Gilroy-Regular;
+}
+
+.footer__policy-items {
+    display: flex;
+
+    &:first-child {
+        margin-right: rem-calc(300);
+    }
+}

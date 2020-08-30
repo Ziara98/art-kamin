@@ -34,7 +34,10 @@
 @import '../sections/catalog/catalog';
 @import '../sections/category/category';
 @import '../sections/features/features';
-
+@import '../sections/barbeque/barbeque';
+@import '../sections/project/project';
+@import '../sections/article/article';
+@import '../sections/footer/footer';
 
 /* BLOCKS */
 @import '../blocks/header/header';
@@ -51,3 +54,12 @@
 @import '../blocks/feature-photo/feature-photo';
 @import '../blocks/feature-content/feature-content';
 @import '../blocks/tabs/tabs';
+@import '../blocks/barbeque/barbeque';
+@import '../blocks/barbeque-content/barbeque-content';
+@import '../blocks/project-content/project-content';
+@import '../blocks/article-content/article-content';
+@import '../blocks/footer-logo/footer-logo';
+@import '../blocks/footer-text/footer-text';
+@import '../blocks/footer-info/footer-info';
+@import '../blocks/footer-nav/footer-nav';
+@import '../blocks/footer-policy/footer-policy';

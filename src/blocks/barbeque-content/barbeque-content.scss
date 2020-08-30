@@ -1,0 +1,205 @@
+.barbeque__inner {
+
+    // position: absolute;
+    // bottom: -200px;
+    margin-top: -250px;
+
+
+}
+
+.barbeque__item {
+    text-align: center;
+    display: flex !important;
+    align-items: center;
+    flex-direction: column;
+
+
+    &:nth-child(4) {
+        margin-top: rem-calc(100);
+    }
+
+    &:nth-child(5) {
+        margin-top: rem-calc(-15);
+    }
+
+    &:nth-child(6) {
+        margin-top: rem-calc(140);
+    }
+
+    &:nth-child(7) {
+        margin-top: rem-calc(100);
+    }
+
+    &:nth-child(8) {
+        margin-top: rem-calc(-15);
+    }
+
+    &:nth-child(9) {
+        margin-top: rem-calc(140);
+    }
+
+}
+
+
+.barbeque__text {
+    font-size: rem-calc(17);
+    line-height: 140%;
+    text-align: center;
+    color: #2D2D2D;
+    @include Gilroy-Regular;
+    max-width: 110px;
+    margin: 0 auto;
+}
+
+.barbeque__text-hidden {
+    opacity: 0;
+    font-size: rem-calc(15);
+    line-height: 140%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+    @include Gilroy-Regular;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 9px;
+    // margin-bottom: rem-calc(40);
+}
+
+.bbq__svg {
+    height: 24px;
+    width: 24px;
+    stroke: rgba(0, 0, 0, 0.5);
+    margin-left: 14px;
+}
+
+//arrows
+.barbeque-prev,
+.barbeque-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    bottom: -55%;
+    left: 21%;
+    display: block;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+    background-color: #171717;
+    border-radius: 50%;
+    height: rem-calc(47);
+    width: rem-calc(49);
+}
+
+
+.barbeque-prev {
+    position: absolute;
+    bottom: rem-calc(-140);
+    left: rem-calc(80);
+}
+
+
+.barbeque-next {
+    position: absolute;
+    bottom: rem-calc(-140);
+    left: rem-calc(1475);
+}
+
+.barbeque-prev:hover:before,
+.barbeque-prev:focus:before,
+.barbeque-next:hover:before,
+.barbeque-next:focus:before,
+.barbeque-prev:hover:after,
+.barbeque-prev:focus:after,
+.barbeque-next:hover:after,
+.barbeque-next:focus:after {
+    background: #F73A00;
+}
+
+
+
+.barbeque-prev.slick-disabled:before,
+.barbeque-next.slick-disabled:before {
+    opacity: .25;
+}
+
+.barbeque-prev:before,
+.barbeque-next:before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+
+    opacity: .75;
+    color: white;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.barbeque-prev:before {
+    /* content: '←'; */
+    content: '';
+    display: block;
+    width: 2px;
+    height: 9px;
+    background: #FFFFFF;
+    margin: 0 auto;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 16px;
+    left: 25px;
+    border-radius: 99px;
+    transition: background 0.4s linear;
+}
+
+.barbeque-prev:after {
+    /* content: '←'; */
+    content: '';
+    display: block;
+    width: 2px;
+    height: 10px;
+    background: #FFFFFF;
+    margin: 0 auto;
+    transform: rotate(-45deg);
+    position: absolute;
+    bottom: 15px;
+    left: 25px;
+    border-radius: 99px;
+    transition: background 0.4s linear;
+}
+
+.barbeque-next:before {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 10px;
+    background: #FFFFFF;
+    margin: 0 auto;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 16px;
+    left: 25px;
+    border-radius: 99px;
+    transition: background 0.4s linear;
+}
+
+.barbeque-next:after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 10px;
+    background: #FFFFFF;
+    margin: 0 auto;
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: 15px;
+    right: 22px;
+    border-radius: 99px;
+    transition: background 0.4s linear;
+
+}

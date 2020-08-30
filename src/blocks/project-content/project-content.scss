@@ -1,0 +1,130 @@
+.project__inner {
+    padding: rem-calc(80) 0;
+}
+
+
+.project__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project__title {
+    font-size: rem-calc(38);
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    @include Gilroy-Black;
+}
+
+
+
+.project__text {
+    font-size: rem-calc(15);
+    line-height: 140%;
+    color: #FFFFFF;
+    @include Gilroy-Light;
+    max-width: 436px;
+
+}
+
+.project-btn {
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+
+.project__content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: rem-calc(80);
+    justify-content: space-between;
+    @include col();
+    @include size-lgs(12);
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.project__item {
+    position: relative;
+
+    &:nth-child(4) {
+        margin-right: -10px;
+    }
+
+    &:nth-child(8) {
+        margin-right: -10px;
+        margin-top: 10px;
+    }
+
+    &:nth-child(5) {
+        margin-top: 10px;
+    }
+
+    &:nth-child(6) {
+        margin-top: 10px;
+    }
+
+    &:nth-child(7) {
+        margin-top: 10px;
+    }
+}
+
+
+.project__text-block {
+    opacity: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s linear;
+}
+
+.project__item:hover .project__text-block {
+    opacity: 1;
+}
+
+
+.block-inner {
+    display: flex;
+}
+
+.project-block-title {
+    font-size: rem-calc(22);
+    line-height: 120%;
+    color: #FFFFFF;
+    @include Gilroy-Bold;
+    max-width: 170px;
+    margin: 40px 0 10px 12px;
+
+    &:after {
+        display: block;
+        content: '';
+        width: rem-calc(242);
+        height: rem-calc(1);
+        background: #FFFFFF;
+        margin-top: 13px;
+    }
+}
+
+
+.project-block-text {
+    font-size: rem-calc(15);
+    line-height: 140%;
+    text-align: center;
+    color: #FFFFFF;
+    @include Gilroy-Regular;
+    margin-right: 120px;
+    margin-left: 10px;
+    margin-top: 1px;
+}
+
+
+.project__svg {
+    width: rem-calc(24);
+    height: rem-calc(24);
+    stroke: #fff;
+}

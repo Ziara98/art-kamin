@@ -1,0 +1,13 @@
+.footer__logo {
+    @include col();
+    @include size-lgs(4);
+    display: flex;
+    justify-content: center;
+    margin-left: rem-calc(85) !important;
+}
+
+.footer__svg {
+    width: rem-calc(233);
+    height: rem-calc(213);
+    fill: #fff;
+}

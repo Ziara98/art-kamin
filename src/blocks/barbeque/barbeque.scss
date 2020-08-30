@@ -1,0 +1,17 @@
+.barbeque__bg {
+    background: url(../img/barbeque/barbeque.jpg) center no-repeat;
+    height: rem-calc(620);
+    background-size: cover;
+    text-align: center;
+    position: relative;
+}
+
+
+.barbeque__title {
+    font-size: rem-calc(38);
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #000000;
+    @include Gilroy-Black;
+    padding: rem-calc(100) 0 rem-calc(34);
+}

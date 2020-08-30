@@ -1,0 +1,32 @@
+.footer__nav {
+    @include col();
+    @include size-lgs(8);
+    display: flex;
+    margin-left: rem-calc(-110) !important;
+    margin-bottom: rem-calc(60);
+}
+
+.footer__nav-items {
+    margin-right: rem-calc(120);
+}
+
+.footer__nav-title {
+    font-size: 22px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    @include Gilroy-Bold;
+    margin-bottom: rem-calc(28);
+}
+
+.footer__nav-text {
+    font-size: 17px;
+    line-height: 140%;
+    color: #FFFFFF;
+    @include Gilroy-Regular;
+    margin-bottom: rem-calc(20);
+
+    &:last-child {
+        margin-bottom: rem-calc(0);
+    }
+}
